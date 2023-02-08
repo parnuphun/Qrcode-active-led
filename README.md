@@ -1,7 +1,10 @@
 ## IOT LAB
-Send Temperature , Humidity and Led Status to DB
+LAB : Send Temperature , Humidity and Led Status to DB
+Mini Project : 
 
 - [Frontend VUE](https://github.com/parnuphun/myWebSite/blob/master/src/views/WorkShops/MiniProject_Iot/miniProject.vue)
+- [Backend JS (Demo)]()
+- [Backend TS + Prisma]()
 - [Database Prisma Schema](https://github.com/parnuphun/IOT_LAB/blob/master/database%20Prisma%20Schema.txt) 
 
 ## Arduino Library
