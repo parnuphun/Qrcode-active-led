@@ -1,0 +1,11 @@
+model Iot_Lab_DHT {
+  Iot_Lab_DHT_id       Int      @id @default(autoincrement())
+  Iot_Lab_DHT_Temp     Float    @db.Float
+  Iot_Lab_DHT_Humidity Float    @db.Float
+  Iot_Lab_DHT_Date     DateTime @default(now()) @db.Timestamp(0)
+}
+
+model Iot_Lab_LED {
+  Iot_Lab_LED_Id     Int @id @default(autoincrement())
+  Iot_Lab_LED_Status Int @db.TinyInt
+}
