@@ -1,7 +1,7 @@
-## IOT LAB9 
+## IOT LAB
 Send Temperature , Humidity and Led Status to DB
 
-[Frontend => Vue3](https://github.com/parnuphun/myWebSite/blob/master/src/views/WorkShops/MiniProject_Iot/miniProject.vue)
+- [Frontend => Vue3](https://github.com/parnuphun/myWebSite/blob/master/src/views/WorkShops/MiniProject_Iot/miniProject.vue)
 
 ## Arduino Lib 
 - [Arduino JSON](https://www.youtube.com/watch?v=GUTpaY1YaXo)
