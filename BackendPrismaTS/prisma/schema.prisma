@@ -1,0 +1,29 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Iot_Lab_DHT {
+  Iot_Lab_DHT_id       Int      @id @default(autoincrement())
+  Iot_Lab_DHT_Temp     Float    @db.Float
+  Iot_Lab_DHT_Humidity Float    @db.Float
+  Iot_Lab_DHT_Date     DateTime @default(now()) @db.Timestamp(0)
+}
+
+model Iot_Lab_LED {
+  Iot_Lab_LED_Id     Int @id @default(autoincrement())
+  Iot_Lab_LED_Status Int @db.TinyInt
+}
+
+model Movie_List {
+  Movie_List_Id   Int @id @default(autoincrement())
+  Movie_List_Title String
+  Movie_List_Poster String
+  Movie_List_Watch_Status Boolean
+  Movie_List_Rating Int
+  Movie_List_Date DateTime
+}
