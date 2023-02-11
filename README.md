@@ -1,10 +1,10 @@
 ## :pencil: Aboute this project
 This project is an iot course to learn how to use ESP8266 to send data from device to website by fetching data from database.
 
-<p align="">
+<!-- <p align="">
    <img src="https://github.com/parnuphun/ESP8266-Lab/blob/master/Images/front.jpg" width="50%">
 </p>
-
+ -->
 - [Frontend VUE](https://github.com/parnuphun/myWebSite/blob/master/src/views/WorkShops/MiniProject_Iot/miniProject.vue)
 - [Backend JS (Demo)]()
 - [Backend TS + Prisma]()
