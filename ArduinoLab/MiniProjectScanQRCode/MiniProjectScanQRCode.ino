@@ -33,12 +33,13 @@ const int pixelSize = 2;
 
 ESP8266WebServer server;
 uint8_t pin_led = 2;
-char* ssid = "first";
+char* ssid = "phill";
 char* password = "00000000";
 int sw = 12;
 int swQrCode = 16 ;
 int status_led;
-char* host = "192.168.142.37";
+//char* host = "192.168.142.37";
+char* host = "128.199.86.217";
 WiFiClient client;
 HTTPClient http;
 int apiPort = 4020;
@@ -71,10 +72,10 @@ void setup()
 
 }
 
-unsigned long interval = 60000; // 10 minutes in milliseconds
+unsigned long interval = 60000; // 1 minuit
 unsigned long previousMillis = 0;
 
-unsigned long interval2 = 100000; // 10 minutes in milliseconds
+unsigned long interval2 = 120000; // 2 minuit
 unsigned long previousMillis2 = 0;
 
 void loop(){
@@ -84,28 +85,26 @@ void loop(){
   if (currentMillis - previousMillis >= interval) {
     previousMillis = currentMillis;
     API_InsertDHTData();
-    Serial.println(" IN IN ");
   }
 
   unsigned long currentMillis2 = millis();
   if (currentMillis2 - previousMillis2 >= interval2) {
-//      Serial.println("Reset OLED !!");
-//      display.display();
-//      delay(2000);
-//      display.clearDisplay();
+      previousMillis2 = currentMillis2;
+      Serial.println("Reset OLED !!");
+      display.display();
+      delay(2000);
+      display.clearDisplay();
   }
 
   
   if (digitalRead(sw) == 0) {
     toggleLED();
-    showQRCode("https://web.facebook.com/phanuphun.nw/");
     delay(500);
   }
 
   if (digitalRead(swQrCode) == 0) {
     Serial.println("generated !!");
-//    showQRCode("https://3bb4-2001-44c8-4291-baad-f070-9278-c18d-7b2b.ngrok.io/updateLedStatus/"+String(!digitalRead(pin_led)));
-    showQRCode("kuy");
+    showQRCode("http://" +String(host)+ ":" +String(apiPort)+ "/updateLedStatus/" + String(!digitalRead(pin_led)));
 //    showQRCode("www.facebook.com");
     delay(500);
   }
