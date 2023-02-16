@@ -5,6 +5,13 @@ This project is an iot course to learn how to use ESP8266 to send data from devi
 - [Backend TS + Prisma](https://github.com/parnuphun/Iot-lab-project/tree/master/BackendPrismaTS)
 - [Database Prisma Schema](https://github.com/parnuphun/IOT_LAB/blob/master/database%20Prisma%20Schema.txt) 
 
+## :nut_and_bolt: Hardware
+- ESP8266
+- OLED
+- DHT22
+- Switch x1
+- LED x1
+
 ## :package: Arduino Library
 - [Arduino JSON](https://www.youtube.com/watch?v=GUTpaY1YaXo)
 - [ESP8266WIFI]()
